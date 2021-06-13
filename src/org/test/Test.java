@@ -1,5 +1,6 @@
 package org.test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -21,6 +22,12 @@ public class Test {
 		String title = driver.getTitle();
 		
 		System.out.println(title);
+		
+		driver.findElement(By.id("email")).sendKeys("prathap");
+		
+		driver.findElement(By.id("pass")).sendKeys("prathap2");
+		
+		driver.findElement(By.name("login")).click();
 		
 }
 }
